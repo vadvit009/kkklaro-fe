@@ -1,0 +1,6 @@
+echo "Running next.js build check..."
+npm run build --silent
+if [ $? -ne 0 ]; then
+  echo "Build failed. Push aborted."
+  exit 1
+fi
