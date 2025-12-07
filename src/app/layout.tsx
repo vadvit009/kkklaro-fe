@@ -5,7 +5,6 @@ import "./globals.css";
 
 type Props = {
   children: ReactNode;
-  params?: { locale?: string };
 };
 
 export const lato = Lato({
@@ -14,10 +13,9 @@ export const lato = Lato({
   subsets: ["latin"],
 });
 
-export default function RootLayout({ children, params }: Props) {
-  const locale = params?.locale || "en";
+export default function RootLayout({ children }: Props) {
   return (
-    <html lang={locale} className={lato.className}>
+    <html className={lato.className}>
       <body>{children}</body>
     </html>
   );

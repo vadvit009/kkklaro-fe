@@ -2,7 +2,6 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
-import { LocaleLangUpdater } from "@/components/LocaleLangUpdater";
 import { routing } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -21,10 +20,5 @@ export default async function LocaleLayout({
   // Static rendering
   setRequestLocale(locale);
 
-  return (
-    <>
-      <LocaleLangUpdater />
-      <NextIntlClientProvider>{children}</NextIntlClientProvider>
-    </>
-  );
+  return <NextIntlClientProvider>{children}</NextIntlClientProvider>;
 }
