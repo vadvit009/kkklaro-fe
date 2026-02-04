@@ -15,7 +15,7 @@ export const bricolage = Bricolage_Grotesque({
 
 export const montserrat = Montserrat({
   weight: ["600"],
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
   variable: "--font-montserrat",
 });
 
