@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 @theme {
+  /* Fonts */
+  --font-bricolage: var(--font-bricolage);
+  --font-montserrat: var(--font-montserrat);
+
   /* Colors - Purple */
   --color-purple-primary: #88098d;
   --color-purple-accent: #d23dd8;
