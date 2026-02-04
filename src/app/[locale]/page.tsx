@@ -3,6 +3,7 @@ import { Locale, useLocale, useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { useTransition } from "react";
 
+import { Button, Heading } from "@/components/ui";
 import { usePathname, useRouter } from "@/i18n/navigation";
 
 export default function Home() {
@@ -26,10 +27,12 @@ export default function Home() {
     });
   }
   return (
-    <div className="flex h-svh items-center justify-center bg-black">
+    <div className="flex h-svh flex-col items-center justify-center gap-8 bg-black">
       <p onClick={changeLocale} className="max-w-2xs text-5xl text-amber-400">
         {t("greeting")}
       </p>
+      <Heading variant="hero">{t("title")}</Heading>
+      <Button variant="primary">{t("title")}</Button>
     </div>
   );
 }
