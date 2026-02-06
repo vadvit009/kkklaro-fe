@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "icons": "svgr --out-dir src/components/icons assets/icons",
+    "icons:watch": "svgr --out-dir src/components/icons assets/icons --watch"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,md}": [
@@ -28,6 +30,7 @@
   "devDependencies": {
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
+    "@svgr/cli": "^8.1.0",
     "@tailwindcss/postcss": "^4.1.17",
     "@trivago/prettier-plugin-sort-imports": "^6.0.0",
     "@types/node": "^20",
