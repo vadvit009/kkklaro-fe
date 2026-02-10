@@ -21,7 +21,6 @@ export default async function HomePage() {
 
   return (
     <>
-      <Header />
       <main>
         <HeroSection />
         <BuiltForSection />
@@ -53,10 +52,9 @@ export default async function HomePage() {
           </Heading>
           <Button variant="primary">{t("cta")}</Button>
         </CTABannerLayout>
-        {/* <ClaritySection /> */}
-        {/* <FAQSection /> */}
+        <ClaritySection />
+        <FAQSection />
       </main>
-      <Footer />
     </>
   );
 }

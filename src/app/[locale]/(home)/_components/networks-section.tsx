@@ -9,20 +9,16 @@ export const NetworksSection = async () => {
   return (
     <section
       id="networks"
-      className={cn(
-        "bg-bg-primary px-5 py-20",
-        "md:px-10 md:py-28",
-        "xl:px-20",
-      )}
+      className={cn("bg-[#040206] px-5 py-20", "md:px-10 md:py-28", "xl:px-20")}
     >
       <div className="container">
-        <div className="grid gap-12 lg:gap-20 xl:grid-cols-2">
-          <div
-            className={cn(
-              "flex items-center justify-center",
-              "order-2 lg:order-1",
-            )}
-          ></div>
+        <div
+          className={cn(
+            "grid gap-12 bg-[url('/images/home/networks-bg-mob.png')] bg-center bg-no-repeat",
+            "lg:gap-20 xl:grid-cols-2 xl:bg-[url('/images/home/networks-bg.png')] xl:bg-[position:-90px_center]",
+          )}
+        >
+          <div className={cn("order-2 lg:order-1")} />
 
           <div className="order-1 lg:order-2">
             <Heading

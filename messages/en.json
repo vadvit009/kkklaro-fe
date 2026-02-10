@@ -1,6 +1,7 @@
 {
   "header": {
     "bookDemo": "Book a Demo",
+    "getInTouch": "Get in Touch",
     "nav": {
       "products": "Products",
       "services": "Services",
@@ -67,31 +68,58 @@
   },
   "clarity": {
     "title": "Instead of complexity, you get clarity",
-    "description": "Klaro Gate works as a standalone payments platform or as a full crypto white-label you embed into your product.",
-    "standalone": {
-      "title": "Standalone",
-      "description": "Use Klaro as your main crypto payments gateway."
-    },
-    "whiteLabel": {
-      "title": "White-label",
-      "description": "Embed Klaro crypto tools fully into your product."
-    },
-    "feature1": "Live tracking on every payment",
-    "feature2": "Centralized dashboard for all crypto operations"
+    "items": {
+      "item1": {
+        "line1": "Instead of starting simple and rebuilding later",
+        "line2": "You get a platform that scales with you"
+      },
+      "item2": {
+        "line1": "Instead of handling private keys and security risks",
+        "line2": "You get managed wallets and on-chain operations"
+      },
+      "item3": {
+        "line1": "Instead of experimental crypto tools",
+        "line2": "You get production-ready payment flows"
+      },
+      "item4": {
+        "line1": "Instead of multiple tools for different use cases",
+        "line2": "You get one platform for every stage"
+      },
+      "item5": {
+        "line1": "Instead of separate systems for UI and integrations",
+        "line2": "You get an API-first platform"
+      }
+    }
   },
   "faq": {
     "title": "FAQ",
     "q1": {
-      "question": "Is Klaro Gate a wallet or a payments platform?",
-      "answer": "Klaro Gate is a crypto payment infrastructure platform that enables businesses to accept, manage, and process cryptocurrency payments without the complexity of building their own crypto infrastructure."
+      "question": "Is Klaro Gate a wallet or a payment platform?",
+      "answer": "Klaro Gate is an operational platform for crypto payments. It provides managed wallets, payment tracking, balances and withdrawals — without exposing private keys to clients."
     },
     "q2": {
-      "question": "How do I integrate with Klaro?",
-      "answer": "You can integrate via our API or use our dashboard directly. We provide comprehensive documentation, SDKs, and dedicated support to help you get started quickly."
+      "question": "Do I need to manage private keys or blockchain infrastructure?",
+      "answer": "No. Klaro Gate handles all wallet management, key storage and blockchain interactions. You work with a clean API and dashboard — no infrastructure to maintain."
     },
     "q3": {
-      "question": "Do I need to manage private keys or blockchain infrastructure?",
-      "answer": "No, Klaro Gate handles all the technical complexity for you. You don't need to manage private keys, run blockchain nodes, or worry about wallet security — we take care of everything."
+      "question": "How fast can I get started?",
+      "answer": "You can create an account and start accepting crypto payments within minutes. Our onboarding process is simple and requires no technical blockchain knowledge."
+    },
+    "q4": {
+      "question": "Can I see where my funds are at any moment?",
+      "answer": "Yes. Klaro Gate provides a centralized dashboard with real-time balances, transaction history and payment tracking across all your accounts and wallets."
+    },
+    "q5": {
+      "question": "Can I receive payments without creating invoices?",
+      "answer": "Yes. You can share a wallet address directly or use our payment links. Invoices are optional and can be generated when needed."
+    },
+    "q6": {
+      "question": "Can I manage multiple customers or projects separately?",
+      "answer": "Yes. Klaro Gate supports multiple accounts and sub-accounts, allowing you to separate funds, track payments and manage operations for different customers or projects independently."
+    },
+    "q7": {
+      "question": "Which blockchains and assets are supported?",
+      "answer": "Klaro Gate supports Ethereum, Tron, Solana, Polygon and BNB Smart Chain. Supported assets include USDT, USDC, BTC, ETH, BNB, TRX, DOGE and PEPE."
     }
   },
   "footer": {

@@ -103,11 +103,11 @@ body {
 }
 
 .animate-accordion-down {
-  animation: accordion-down 0.2s ease-out;
+  animation: accordion-down 0.35s ease-in-out;
 }
 
 .animate-accordion-up {
-  animation: accordion-up 0.2s ease-out;
+  animation: accordion-up 0.3s ease-in-out;
 }
 
 /* Dialog animations */
@@ -183,6 +183,18 @@ body {
   @media (width >= 768px) {
     .container {
       padding-inline: 40px;
+    }
+  }
+
+  .container-s {
+    max-width: 1728px;
+    padding-inline: 12px;
+    margin: 0 auto;
+  }
+
+  @media (width >= 768px) {
+    .container-s {
+      padding-inline: 90px;
     }
   }
 }

@@ -1,9 +1,10 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 import { Link } from "@/i18n/navigation";
-import { mobileNavLinks, navLinks } from "@/lib/constants";
+import { navLinks } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 import { BrandLogo } from "../icons";
@@ -12,22 +13,18 @@ import { MobileMenu } from "./mobile-menu";
 
 export const Header = () => {
   const t = useTranslations("header");
+  const pathname = usePathname();
 
   return (
     <header
       className={cn(
-        "absolute top-0 right-0 left-0 z-30 p-2.5",
-        "md:p-7",
-        "bg-bg-primary/80 backdrop-blur-md",
-        "border-border-light/50 border-b",
+        "absolute top-0 right-0 left-0 z-30 py-2.5",
+        "md:bg-bg-primary md:static md:py-7",
       )}
     >
       <div
         className={cn(
-          "mx-auto flex h-16 max-w-[1556px] shrink-0 items-center justify-between gap-4",
-          "px-5",
-          "md:h-20 md:px-10",
-          "xl:px-20",
+          "container-s flex shrink-0 items-center justify-between gap-4",
         )}
       >
         <Link
@@ -41,22 +38,30 @@ export const Header = () => {
         </Link>
 
         <nav className="hidden items-center gap-[clamp(0.75rem,3vw,5rem)] lg:flex">
-          {navLinks.map((item) => (
-            <Link
-              key={item.tKey}
-              href={item.href}
-              className="text-text-primary hover:text-purple-light uppercase"
-            >
-              {t(`nav.${item.tKey}`)}
-            </Link>
-          ))}
+          {navLinks.map((item) => {
+            const isActive =
+              pathname === item.href || pathname.startsWith(item.href + "/");
+
+            return (
+              <Link
+                key={item.tKey}
+                href={item.href}
+                className={cn(
+                  "hover:text-purple-light uppercase",
+                  isActive ? "text-purple-light" : "text-text-primary",
+                )}
+              >
+                {t(`nav.${item.tKey}`)}
+              </Link>
+            );
+          })}
         </nav>
 
         <Button variant="primary" className="hidden lg:flex">
           {t("bookDemo")}
         </Button>
 
-        <MobileMenu items={mobileNavLinks} />
+        <MobileMenu items={navLinks} />
       </div>
     </header>
   );
