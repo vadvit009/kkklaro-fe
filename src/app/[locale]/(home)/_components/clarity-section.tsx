@@ -1,0 +1,61 @@
+import { getTranslations } from "next-intl/server";
+import Image from "next/image";
+
+import { Heading } from "@/components/ui";
+import { cn } from "@/lib/utils";
+
+import { ClarityListItem } from "./clarity-list-item";
+
+export const ClaritySection = async () => {
+  const t = await getTranslations("clarity");
+
+  const items = [
+    { line1: t("items.item1.line1"), line2: t("items.item1.line2") },
+    { line1: t("items.item2.line1"), line2: t("items.item2.line2") },
+    { line1: t("items.item3.line1"), line2: t("items.item3.line2") },
+    { line1: t("items.item4.line1"), line2: t("items.item4.line2") },
+    { line1: t("items.item5.line1"), line2: t("items.item5.line2") },
+  ];
+
+  return (
+    <section id="clarity" className="w-full md:py-24 md:pt-18 md:pb-13">
+      <div className="container-s">
+        <Heading
+          as="h2"
+          variant="section-lg"
+          className="mb-8 text-center md:mb-17"
+        >
+          {t("title")}
+        </Heading>
+
+        <div className="flex flex-col lg:flex-row lg:gap-8">
+          <div className="mb-4.5 flex flex-col lg:mb-0 lg:w-1/2">
+            <ul className="flex flex-col text-[1.375rem] leading-[1.45455]">
+              {items.map((item, index) => (
+                <ClarityListItem
+                  key={index}
+                  line1={item.line1}
+                  line2={item.line2}
+                />
+              ))}
+            </ul>
+          </div>
+
+          <div
+            className={cn(
+              "flex lg:w-1/2",
+              "items-end justify-center md:mb-[-52px]",
+            )}
+          >
+            <Image
+              src="/images/home/onbording.png"
+              width={769}
+              height={506}
+              alt="Clarity section preview"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};

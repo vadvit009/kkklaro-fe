@@ -23,18 +23,18 @@ export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
 const headingVariants = {
   hero: ["text-[3.75rem]", "font-semibold", "leading-[1.1]", "text-text-hero"],
   "section-xl": [
-    "text-5xl",
+    "text-[2rem]",
     "font-extralight",
     "leading-[1.25]",
     "text-text-primary",
   ],
   "section-lg": [
-    "text-[2.5rem]",
+    "text-[1.625rem] md:text-[2.5rem]",
     "font-medium",
     "leading-[1.2]",
     "text-text-primary",
   ],
-  card: ["text-[2rem]", "font-medium", "leading-[1.3]", "text-text-primary"],
+  card: ["text-[2rem]", "font-regular", "leading-[1.3]", "text-text-primary"],
   small: ["text-xl", "font-medium", "leading-[1.4]", "text-text-primary"],
 };
 

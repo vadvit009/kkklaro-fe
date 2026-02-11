@@ -24,7 +24,12 @@ const textBase = ["font-normal"];
 
 const textVariants = {
   body: ["text-base", "leading-[1.6]", "text-text-primary"],
-  "card-lg": ["text-[1.375rem]", "leading-[1.3]", "text-text-primary"],
+  "card-lg": [
+    "text-[1.375rem]",
+    "leading-[1.3]",
+    "text-text-primary",
+    "font-extralight",
+  ],
   card: ["text-lg", "leading-[1.3]", "text-text-primary"],
   accordion: [
     "text-[1.375rem]",

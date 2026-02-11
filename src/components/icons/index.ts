@@ -1,1 +1,6 @@
 export { ArrowRight } from "./arrow-right";
+export { BrandLogo } from "./brand-logo";
+export { Close } from "./close";
+export { Burger } from "./burger";
+export { ChevronDown } from "./chevron-down";
+export { Check } from "./check";
