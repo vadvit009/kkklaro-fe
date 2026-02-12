@@ -9,7 +9,11 @@ export const NetworksSection = async () => {
   return (
     <section
       id="networks"
-      className={cn("bg-[#040206] px-5 py-20", "md:px-10 md:py-28", "xl:px-20")}
+      className={cn(
+        "bg-[#040206] px-5 py-20",
+        "md:px-10 md:py-28 md:pt-38",
+        "xl:px-20",
+      )}
     >
       <div className="container">
         <div

@@ -122,6 +122,32 @@
       "answer": "Klaro Gate supports Ethereum, Tron, Solana, Polygon and BNB Smart Chain. Supported assets include USDT, USDC, BTC, ETH, BNB, TRX, DOGE and PEPE."
     }
   },
+  "contacts": {
+    "subtitle": "We'd love to hear from you",
+    "title": "Let's talk about your use case!",
+    "form": {
+      "name": "Your name",
+      "namePlaceholder": "Enter your name and surname",
+      "email": "Your email",
+      "emailPlaceholder": "Enter your email",
+      "requestType": "Request type",
+      "requestTypePlaceholder": "Book a demo",
+      "message": "Message",
+      "messagePlaceholder": "Tell us a bit about your needs",
+      "submit": "Submit"
+    },
+    "requestTypes": {
+      "bookDemo": "Book a demo",
+      "consultation": "Consultation",
+      "partnership": "Partnership program"
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "requestTypeRequired": "Request type is required"
+    }
+  },
   "footer": {
     "copyright": "© Klaro Gate – 2026. All rights reserved",
     "legal": "Legal",

@@ -18,7 +18,10 @@ export const ClaritySection = async () => {
   ];
 
   return (
-    <section id="clarity" className="w-full md:py-24 md:pt-18 md:pb-13">
+    <section
+      id="clarity"
+      className="w-full bg-[url('/images/home/clarity-bg.png')] bg-cover bg-center bg-no-repeat md:py-24 md:pt-18 md:pb-13"
+    >
       <div className="container-s">
         <Heading
           as="h2"

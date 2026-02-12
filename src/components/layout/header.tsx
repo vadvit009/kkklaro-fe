@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import { Link } from "@/i18n/navigation";
 import { navLinks } from "@/lib/constants";
@@ -14,12 +15,21 @@ import { MobileMenu } from "./mobile-menu";
 export const Header = () => {
   const t = useTranslations("header");
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 300);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <header
       className={cn(
-        "absolute top-0 right-0 left-0 z-30 py-2.5",
-        "md:bg-bg-primary md:static md:py-7",
+        "fixed top-0 right-0 left-0 z-30 py-2.5 transition-colors duration-300",
+        "lg:bg-bg-primary lg:static lg:py-7",
+        scrolled ? "bg-bg-primary" : "bg-transparent",
       )}
     >
       <div

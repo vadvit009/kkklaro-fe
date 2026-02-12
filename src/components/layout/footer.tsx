@@ -18,8 +18,8 @@ export const Footer = () => {
     <footer className="border-border-light bg-bg-primary border-t">
       <div
         className={cn(
-          "container-s flex flex-col items-center gap-7.5 py-10",
-          "lg:flex-row lg:items-baseline lg:justify-between lg:py-12",
+          "mx-auto flex flex-col items-center gap-7.5 px-3 py-10",
+          "w-full md:px-10 lg:flex-row lg:items-baseline lg:justify-between lg:py-12 xl:px-[90px]",
         )}
       >
         <div className="flex flex-col items-center gap-4.5 lg:items-start">

@@ -29,6 +29,7 @@
   --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-error: #ef4444;
+  --color-required: #fd7a23;
 
   /* Colors - Interactive */
   /* --color-hover: #7c3aed; */
@@ -193,6 +194,11 @@ body {
   }
 
   @media (width >= 768px) {
+    .container-s {
+      padding-inline: 40px;
+    }
+  }
+  @media (width >= 1280px) {
     .container-s {
       padding-inline: 90px;
     }

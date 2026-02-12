@@ -1,19 +1,36 @@
-import { useLocale, useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-const ContactsPage = () => {
-  const locale = useLocale();
+import { Heading, Text } from "@/components/ui";
+
+import { ContactForm } from "./_components";
+
+export default async function ContactsPage() {
+  const t = await getTranslations("contacts");
+
   return (
-    <>
-      <h1>Contacts page</h1>
-      <p>{locale}</p>
-      <div>
-        Mollit pariatur fugiat eiusmod ullamco pariatur adipisicing culpa duis
-        excepteur tempor laborum. Minim et nisi sint dolor ut aliquip enim esse.
-        Elit dolore in exercitation mollit eu est excepteur excepteur in officia
-        amet.
-      </div>
-    </>
-  );
-};
+    <main>
+      <section className="container-s pt-5 pb-13 md:pt-18 md:pb-20">
+        <div className="mb-13 md:mb-31">
+          <Text
+            as="p"
+            variant="body"
+            className="mb-0.5 text-sm font-bold tracking-widest uppercase md:mb-5"
+          >
+            {t("subtitle")}
+          </Text>
+          <Heading
+            as="h1"
+            variant="hero"
+            className="max-w-2xl text-[2.5rem] leading-[1.1] md:text-[5rem]"
+          >
+            {t("title")}
+          </Heading>
+        </div>
 
-export default ContactsPage;
+        <div className="bg-border-light mb-12 h-px md:mb-16" />
+
+        <ContactForm />
+      </section>
+    </main>
+  );
+}

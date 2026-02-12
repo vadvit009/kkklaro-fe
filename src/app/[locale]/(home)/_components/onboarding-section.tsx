@@ -20,10 +20,13 @@ export const OnboardingSection = async () => {
   ];
 
   return (
-    <section id="steps">
+    <section id="steps ">
       <div className="container">
         <SectionBanner
-          className={cn("mt-[-74px] pt-18 pb-0", "md:px-12 md:pt-18 md:pb-0")}
+          className={cn(
+            "mt-[-74px] mb-[-40px] pt-18 pb-0",
+            "md:px-12 md:pt-18 md:pb-0",
+          )}
         >
           <div className="flex flex-col lg:flex-row lg:gap-8">
             <div className="mb-4.5 flex flex-col lg:mb-0 lg:w-1/2">

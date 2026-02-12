@@ -34,7 +34,7 @@ export const FAQSection = () => {
 
         <SectionBanner
           className={cn(
-            "bg-[linear-gradient(180deg,rgba(255,97,255,0.06)_0%,rgba(153,153,153,0.06)_100%)]",
+            "border-1 border-t-white/20 border-r-white/2 border-b-white/1 border-l-white/10 bg-[linear-gradient(180deg,rgba(255,97,255,0.06)_0%,rgba(153,153,153,0.06)_100%)]",
             "p-0 md:p-0",
           )}
         >

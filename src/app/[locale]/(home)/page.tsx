@@ -38,7 +38,7 @@ export default async function HomePage() {
         <OnboardingSection />
         <NetworksSection />
         <CTABannerLayout
-          bgImage="/images/home/cta-bg-secondary@2x.png"
+          bgImage="/images/home/cta-bg-secondary.png"
           overlayClassName="bg-linear-to-b from-[rgba(136,9,141,0.06)] to-[rgba(153,153,153,0.06)]"
           contentClassName="max-w-none"
           className="md:"
