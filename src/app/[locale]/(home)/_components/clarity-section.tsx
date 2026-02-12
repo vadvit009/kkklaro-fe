@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { ClarityListItem } from "./clarity-list-item";
 
 export const ClaritySection = async () => {
-  const t = await getTranslations("clarity");
+  const t = await getTranslations("mainPage.clarity");
 
   const items = [
     { line1: t("items.item1.line1"), line2: t("items.item1.line2") },

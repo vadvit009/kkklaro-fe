@@ -3,7 +3,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 export const CTABannerLayout = ({
-  bgImage = "/images/home/cta-bg@2x.png",
+  bgImage = "/images/common/cta-bg@2x.png",
   overlayClassName,
   contentClassName,
   children,

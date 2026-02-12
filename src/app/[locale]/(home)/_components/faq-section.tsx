@@ -13,7 +13,7 @@ import {
 import { cn } from "@/lib/utils";
 
 export const FAQSection = () => {
-  const t = useTranslations("faq");
+  const t = useTranslations("mainPage.faq");
 
   const faqItems = [
     { id: "q1", question: t("q1.question"), answer: t("q1.answer") },

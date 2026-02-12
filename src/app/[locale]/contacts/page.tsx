@@ -5,7 +5,7 @@ import { Heading, Text } from "@/components/ui";
 import { ContactForm } from "./_components";
 
 export default async function ContactsPage() {
-  const t = await getTranslations("contacts");
+  const t = await getTranslations("contactsPage");
 
   return (
     <main>

@@ -2,9 +2,8 @@
 
 import * as Dialog from "@radix-ui/react-dialog";
 import { useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
 
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import type { NavItem } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 

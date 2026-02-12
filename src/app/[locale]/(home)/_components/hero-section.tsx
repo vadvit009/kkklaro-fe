@@ -6,7 +6,7 @@ import { Button, Heading, Text } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 export const HeroSection = async () => {
-  const t = await getTranslations("hero");
+  const t = await getTranslations("mainPage.hero");
 
   return (
     <section
@@ -36,7 +36,7 @@ export const HeroSection = async () => {
         )}
       >
         <Image
-          src="/images/hero-logo.png"
+          src="/images/home/hero-logo.png"
           alt="Hero image"
           width={297}
           height={297}

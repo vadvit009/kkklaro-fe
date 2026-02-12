@@ -1,9 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
 
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { navLinks } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -11,14 +10,15 @@ import { BrandLogo } from "../icons";
 import { Text } from "../ui";
 
 export const Footer = () => {
-  const t = useTranslations();
+  const t = useTranslations("footer");
+  const tHeader = useTranslations("header");
   const pathname = usePathname();
 
   return (
-    <footer className="border-border-light bg-bg-primary border-t">
+    <footer className="border-text-primary/10 bg-bg-primary border-t">
       <div
         className={cn(
-          "mx-auto flex flex-col items-center gap-7.5 px-3 py-10",
+          "container-s mx-auto flex flex-col items-center gap-7.5 px-3 py-10",
           "w-full md:px-10 lg:flex-row lg:items-baseline lg:justify-between lg:py-12 xl:px-[90px]",
         )}
       >
@@ -32,7 +32,9 @@ export const Footer = () => {
               KLARO GATE
             </Text>
           </Link>
-          <Text variant="copyright">{t("footer.copyright")}</Text>
+          <Text variant="copyright">
+            {t("copyright", { year: new Date().getFullYear() })}
+          </Text>
         </div>
 
         <nav
@@ -54,7 +56,7 @@ export const Footer = () => {
                   isActive ? "text-purple-light" : "text-text-primary",
                 )}
               >
-                {t(`header.nav.${item.tKey}`)}
+                {tHeader(`nav.${item.tKey}`)}
               </Link>
             );
           })}
@@ -62,7 +64,7 @@ export const Footer = () => {
             href="/legal"
             className="text-text-primary hover:text-purple-light transition-colors"
           >
-            {t("footer.legal")}
+            {t("legal")}
           </Link>
         </nav>
       </div>

@@ -13,7 +13,7 @@ import { Button } from "@/components/ui";
 import { ContactFormData, contactFormSchema } from "@/types/forms/contact-form";
 
 export function ContactForm() {
-  const t = useTranslations("contacts");
+  const t = useTranslations("contactsPage");
 
   const requestTypeOptions = useMemo(
     () => [

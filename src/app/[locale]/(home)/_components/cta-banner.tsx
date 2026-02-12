@@ -14,7 +14,7 @@ export const CTABanner = async ({
   contentClassName?: string;
   className?: string;
 }) => {
-  const t = await getTranslations("ctaBanner");
+  const t = await getTranslations("mainPage.ctaBanner");
 
   return (
     <CTABannerLayout

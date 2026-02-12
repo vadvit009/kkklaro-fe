@@ -5,7 +5,7 @@ import { Heading, Text } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 export const BuiltForSection = async () => {
-  const t = await getTranslations("builtFor");
+  const t = await getTranslations("mainPage.builtFor");
 
   const cards = [
     {

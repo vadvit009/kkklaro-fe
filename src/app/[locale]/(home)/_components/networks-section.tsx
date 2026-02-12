@@ -4,7 +4,7 @@ import { Heading, Text } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 export const NetworksSection = async () => {
-  const t = await getTranslations("networks");
+  const t = await getTranslations("mainPage.networks");
 
   return (
     <section

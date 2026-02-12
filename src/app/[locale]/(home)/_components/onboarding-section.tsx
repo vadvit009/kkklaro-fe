@@ -8,7 +8,7 @@ import { Heading, Text } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 export const OnboardingSection = async () => {
-  const t = await getTranslations("steps");
+  const t = await getTranslations("mainPage.steps");
 
   const steps = [
     t("step1"),

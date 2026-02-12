@@ -5,7 +5,7 @@ import { Heading, Text } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 export const FeaturesSection = async () => {
-  const t = await getTranslations("features");
+  const t = await getTranslations("mainPage.features");
 
   const features = [
     t("list.walletCreation"),

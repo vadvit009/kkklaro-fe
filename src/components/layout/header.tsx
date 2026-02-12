@@ -1,9 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
+import { usePathname } from "@/i18n/navigation";
 import { Link } from "@/i18n/navigation";
 import { navLinks } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -27,7 +27,7 @@ export const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 right-0 left-0 z-30 py-2.5 transition-colors duration-300",
+        "lg:border-text-primary/10 fixed top-0 right-0 left-0 z-30 py-2.5 transition-colors duration-300 lg:border",
         "lg:bg-bg-primary lg:static lg:py-7",
         scrolled ? "bg-bg-primary" : "bg-transparent",
       )}
