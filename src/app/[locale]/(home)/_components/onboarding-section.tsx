@@ -3,7 +3,6 @@ import Image from "next/image";
 
 import { StepItem } from "@/components/common";
 import { SectionBanner } from "@/components/common/sections-banner";
-import { ArrowRight } from "@/components/icons";
 import { Heading, Text } from "@/components/ui";
 
 export const OnboardingSection = async () => {
