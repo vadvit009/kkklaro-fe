@@ -1,4 +1,19 @@
 {
+  "metadata": {
+    "siteName": "Klaro Gate",
+    "home": {
+      "title": "Crypto Payment Platform for Business",
+      "description": "Accept and manage crypto payments without complexity. Wallets, balances, withdrawals and tracking — all in one platform."
+    },
+    "services": {
+      "title": "Services",
+      "description": "From invoices and accounts to balances and withdrawals. Everything you need to run crypto payments at scale."
+    },
+    "contacts": {
+      "title": "Contact Us",
+      "description": "Get in touch with Klaro Gate team. Book a demo, request a consultation or explore partnership opportunities."
+    }
+  },
   "header": {
     "signUp": "Sign Up",
     "getInTouch": "Get in Touch",
