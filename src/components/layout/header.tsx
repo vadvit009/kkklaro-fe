@@ -25,26 +25,27 @@ export const Header = () => {
         scrolled ? "bg-bg-primary" : "bg-transparent",
       )}
     >
-      <div
-        className={cn(
-          "container-s flex shrink-0 items-center justify-between gap-4",
-        )}
-      >
+      <div className="container-s flex shrink-0 items-center justify-between gap-4">
         <BrandLink className="text-text-primary" />
 
-        <nav className="hidden items-center gap-[clamp(0.75rem,3vw,5rem)] lg:flex">
-          {navLinks.map((item) => (
-            <Link
-              key={item.tKey}
-              href={item.href}
-              className={cn(
-                "hover:text-purple-light uppercase",
-                isActive(item.href) ? "text-purple-light" : "text-text-primary",
-              )}
-            >
-              {t(`nav.${item.tKey}`)}
-            </Link>
-          ))}
+        <nav className="hidden lg:flex">
+          <ul className="flex items-center gap-[clamp(0.75rem,3vw,5rem)]">
+            {navLinks.map((item) => (
+              <li key={item.tKey}>
+                <Link
+                  href={item.href}
+                  className={cn(
+                    "hover:text-purple-light font-bold uppercase",
+                    isActive(item.href)
+                      ? "text-purple-light"
+                      : "text-text-primary",
+                  )}
+                >
+                  {t(`nav.${item.tKey}`)}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
 
         <Button variant="primary" className="hidden lg:flex">

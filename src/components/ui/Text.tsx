@@ -39,7 +39,13 @@ const textVariants = {
     "text-text-primary",
   ],
   service: ["text-2xl", "leading-[1.33]", "text-text-primary"],
-  caption: ["text-xs", "font-light", "text-text-primary"],
+  caption: [
+    "text-xs",
+    "font-light",
+    "text-text-primary",
+    "uppercase",
+    "leading-[2]",
+  ],
 };
 
 export const Text = ({

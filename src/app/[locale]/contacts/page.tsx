@@ -33,12 +33,12 @@ export default async function ContactsPage() {
             <ContactForm />
           </div>
 
-          <aside className="font-bricolage flex flex-col gap-6 leading-[2] text-white uppercase lg:w-56">
+          <aside className="flex flex-col gap-6 lg:w-56">
             <div>
               <Text variant="caption">{t("contacts.sales")}</Text>
               <a
                 href="mailto:Sales@gmail.com"
-                className="text-base font-bold hover:underline"
+                className="text-text-primary text-base leading-[2] font-bold hover:underline"
               >
                 Sales@gmail.com
               </a>
@@ -47,7 +47,7 @@ export default async function ContactsPage() {
               <Text variant="caption">{t("contacts.partnerships")}</Text>
               <a
                 href="mailto:Partnerships@gmail.com"
-                className="text-base font-bold hover:underline"
+                className="text-text-primary text-base leading-[2] font-bold hover:underline"
               >
                 Partnerships@gmail.com
               </a>
@@ -56,7 +56,7 @@ export default async function ContactsPage() {
               <Text variant="caption">{t("contacts.support")}</Text>
               <a
                 href="mailto:Support@gmail.com"
-                className="text-base font-bold hover:underline"
+                className="text-text-primary text-base leading-[2] font-bold hover:underline"
               >
                 Support@gmail.com
               </a>

@@ -2,7 +2,6 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
 import { Heading, Text } from "@/components/ui";
-import { cn } from "@/lib/utils";
 
 export const BuiltForSection = async () => {
   const t = await getTranslations("mainPage.builtFor");
@@ -29,20 +28,12 @@ export const BuiltForSection = async () => {
   ];
 
   return (
-    <section
-      className={cn(
-        "bg-bg-primary py-20 pt-49 pb-13",
-        "md:py-28 md:pt-69 md:pb-15",
-      )}
-    >
+    <section className="bg-bg-primary py-20 pt-49 pb-13 md:py-28 md:pt-69 md:pb-15">
       <div className="container mx-auto max-w-7xl text-center">
         <Heading
           as="h2"
           variant="section-xl"
-          className={cn(
-            "mx-auto mb-7 max-w-xs text-center",
-            "md:mb-8 md:max-w-full md:text-6xl",
-          )}
+          className="mx-auto mb-7 max-w-xs text-center md:mb-8 md:max-w-full md:text-6xl"
         >
           {t("title")}
         </Heading>
@@ -72,7 +63,7 @@ function BuiltForCard({
   description: string;
 }) {
   return (
-    <li className={cn("flex flex-col")}>
+    <li className="flex flex-col">
       <Image
         src={image}
         alt={title}

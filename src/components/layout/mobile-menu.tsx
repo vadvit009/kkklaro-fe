@@ -57,22 +57,26 @@ export const MobileMenu = ({ items }: MobileMenuProps) => {
             </Dialog.Close>
           </div>
 
-          <nav className="mb-5 flex flex-col">
-            {[...items].reverse().map((item) => (
-              <Dialog.Close asChild key={item.tKey}>
-                <Link
-                  href={item.href}
-                  className={cn(
-                    "border-t border-gray-200 py-6 text-center font-bold uppercase",
-                    "transition-colors",
-                    "hover:text-purple-light",
-                    isActive(item.href) ? "text-purple-light" : "text-black",
-                  )}
-                >
-                  {t(`nav.${item.tKey}`)}
-                </Link>
-              </Dialog.Close>
-            ))}
+          <nav className="mb-5">
+            <ul className="flex flex-col">
+              {[...items].reverse().map((item) => (
+                <li key={item.tKey}>
+                  <Dialog.Close asChild>
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        "hover:text-purple-light block border-t border-gray-200 py-6 text-center font-bold uppercase transition-colors",
+                        isActive(item.href)
+                          ? "text-purple-light"
+                          : "text-black",
+                      )}
+                    >
+                      {t(`nav.${item.tKey}`)}
+                    </Link>
+                  </Dialog.Close>
+                </li>
+              ))}
+            </ul>
           </nav>
 
           <div className="container-s w-full">

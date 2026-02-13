@@ -10,7 +10,6 @@ import {
   AccordionTrigger,
   Heading,
 } from "@/components/ui";
-import { cn } from "@/lib/utils";
 
 export const FAQSection = () => {
   const t = useTranslations("mainPage.faq");
@@ -32,12 +31,7 @@ export const FAQSection = () => {
           {t("title")}
         </Heading>
 
-        <SectionBanner
-          className={cn(
-            "border-1 border-t-white/20 border-r-white/2 border-b-white/1 border-l-white/10 bg-[linear-gradient(180deg,rgba(255,97,255,0.06)_0%,rgba(153,153,153,0.06)_100%)]",
-            "p-0 md:p-0",
-          )}
-        >
+        <SectionBanner className="border-1 border-t-white/20 border-r-white/2 border-b-white/1 border-l-white/10 bg-[linear-gradient(180deg,rgba(255,97,255,0.06)_0%,rgba(153,153,153,0.06)_100%)] p-0 md:p-0">
           <Accordion
             type="single"
             collapsible
@@ -50,20 +44,10 @@ export const FAQSection = () => {
                 value={item.id}
                 className="border-b-[1px] border-b-white/30 last:border-b-0"
               >
-                <AccordionTrigger
-                  className={cn(
-                    "px-6 py-5 font-semibold",
-                    "text-[1.375rem] leading-[1.45455]",
-                  )}
-                >
+                <AccordionTrigger className="px-6 py-5 text-[1.375rem] leading-[1.45455] font-semibold">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent
-                  className={cn(
-                    "px-6 font-extralight",
-                    "text-[1.375rem] leading-[1.45455]",
-                  )}
-                >
+                <AccordionContent className="px-6 text-[1.375rem] leading-[1.45455] font-extralight">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>

@@ -2,7 +2,6 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
 import { Heading } from "@/components/ui";
-import { cn } from "@/lib/utils";
 
 import { ClarityListItem } from "./clarity-list-item";
 
@@ -44,12 +43,7 @@ export const ClaritySection = async () => {
             </ul>
           </div>
 
-          <div
-            className={cn(
-              "flex lg:w-1/2",
-              "items-center justify-center xl:mb-[-80px] xl:items-end",
-            )}
-          >
+          <div className="flex items-center justify-center lg:w-1/2 xl:mb-[-80px] xl:items-end">
             <Image
               src="/images/home/onboarding.png"
               width={769}

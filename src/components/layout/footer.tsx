@@ -18,12 +18,7 @@ export const Footer = () => {
   return (
     <footer className="border-text-primary/10 bg-bg-primary border-t py-12 md:py-16">
       <div className="container-s">
-        <div
-          className={cn(
-            "mx-auto flex max-w-[1350px] flex-col items-center gap-7.5 md:mx-0",
-            "w-full lg:flex-row lg:items-baseline lg:justify-between",
-          )}
-        >
+        <div className="mx-auto flex w-full max-w-[1350px] flex-col items-center gap-7.5 md:mx-0 lg:flex-row lg:items-baseline lg:justify-between">
           <div className="flex flex-col items-center gap-4.5 lg:items-start">
             <BrandLink
               className="text-text-primary"
@@ -33,32 +28,32 @@ export const Footer = () => {
             <Text>{t("copyright", { year: new Date().getFullYear() })}</Text>
           </div>
 
-          <nav
-            className={cn(
-              "flex flex-col-reverse items-center gap-4",
-              "lg:flex-row lg:gap-[clamp(2rem,4vw,5rem)]",
-            )}
-          >
-            {navLinks.map((item) => (
-              <Link
-                key={item.tKey}
-                href={item.href}
-                className={cn(
-                  "hover:text-purple-light text-base font-bold uppercase transition-colors",
-                  isActive(item.href)
-                    ? "text-purple-light"
-                    : "text-text-primary",
-                )}
-              >
-                {tHeader(`nav.${item.tKey}`)}
-              </Link>
-            ))}
-            <Link
-              href="/legal"
-              className="text-text-primary hover:text-purple-light transition-colors"
-            >
-              {t("legal")}
-            </Link>
+          <nav>
+            <ul className="flex flex-col-reverse items-center gap-4 lg:flex-row lg:gap-[clamp(2rem,4vw,5rem)]">
+              {navLinks.map((item) => (
+                <li key={item.tKey}>
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      "hover:text-purple-light text-base font-bold uppercase transition-colors",
+                      isActive(item.href)
+                        ? "text-purple-light"
+                        : "text-text-primary",
+                    )}
+                  >
+                    {tHeader(`nav.${item.tKey}`)}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/legal"
+                  className="text-text-primary hover:text-purple-light transition-colors"
+                >
+                  {t("legal")}
+                </Link>
+              </li>
+            </ul>
           </nav>
         </div>
       </div>

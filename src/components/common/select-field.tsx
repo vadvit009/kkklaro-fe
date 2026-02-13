@@ -24,23 +24,14 @@ interface SelectFieldProps {
   disabled?: boolean;
 }
 
-const triggerStyles = cn(
-  "flex w-full items-center justify-between border-b border-border-light bg-transparent px-0 pt-7 pb-7 text-sm font-bold uppercase  text-text-primary",
-  "transition-colors",
-  "focus:border-purple-accent focus:outline-none",
-  "data-[placeholder]:text-text-primary",
-);
+const triggerStyles =
+  "flex w-full items-center justify-between border-b border-border-light bg-transparent px-0 pt-7 pb-7 text-sm font-bold uppercase text-text-primary transition-colors focus:border-purple-accent focus:outline-none data-[placeholder]:text-text-primary";
 
-const contentStyles = cn(
-  "z-50  overflow-hidden border border-border-light bg-bg-primary shadow-xl",
-);
+const contentStyles =
+  "z-50 overflow-hidden border border-border-light bg-bg-primary shadow-xl";
 
-const itemStyles = cn(
-  "relative flex cursor-pointer select-none items-center gap-3 px-4 py-3 text-sm font-bold uppercase text-text-primary outline-none transition",
-  "data-[highlighted]:bg-white/5",
-  // "data-[state=checked]:text-purple-accent",
-  "data-[disabled]:opacity-50 data-[disabled]:pointer-events-none",
-);
+const itemStyles =
+  "relative flex cursor-pointer select-none items-center gap-3 px-4 py-3 text-sm font-bold uppercase text-text-primary outline-none transition data-[highlighted]:bg-white/5 data-[disabled]:opacity-50 data-[disabled]:pointer-events-none";
 
 export function SelectField({
   id,
