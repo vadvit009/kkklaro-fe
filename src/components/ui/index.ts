@@ -8,9 +8,6 @@ export {
 export { Button } from "./Button";
 export type { ButtonProps } from "./Button";
 
-export { Card } from "./Card";
-export type { CardProps } from "./Card";
-
 export { Heading } from "./Heading";
 export type { HeadingProps } from "./Heading";
 

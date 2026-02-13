@@ -1,8 +1,6 @@
 import { getTranslations } from "next-intl/server";
 
 import { CTABannerLayout } from "@/components/common";
-import { Footer } from "@/components/layout/footer";
-import { Header } from "@/components/layout/header";
 import { Button, Heading } from "@/components/ui";
 
 import {
@@ -10,21 +8,20 @@ import {
   ClaritySection,
   CryptoOperationsSection,
   FAQSection,
-  FeaturesSection,
   HeroSection,
   NetworksSection,
   OnboardingSection,
 } from "./_components";
 
 export default async function HomePage() {
-  const t = await getTranslations("ctaBanner");
+  const t = await getTranslations("mainPage.ctaBanner");
 
   return (
     <>
       <main>
         <HeroSection />
         <BuiltForSection />
-        <CryptoOperationsSection />Н
+        <CryptoOperationsSection />
         <CTABannerLayout overlayClassName="bg-linear-to-b from-[rgba(136,9,141,1)] to-[rgba(153,153,153,0)]">
           <Heading
             as="h2"
@@ -38,10 +35,10 @@ export default async function HomePage() {
         <OnboardingSection />
         <NetworksSection />
         <CTABannerLayout
-          bgImage="/images/home/cta-bg-secondary@2x.png"
+          bgImage="/images/common/cta-bg-secondary.png"
           overlayClassName="bg-linear-to-b from-[rgba(136,9,141,0.06)] to-[rgba(153,153,153,0.06)]"
           contentClassName="max-w-none"
-          className="md:"
+          className=""
         >
           <Heading
             as="h2"

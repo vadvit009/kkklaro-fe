@@ -2,10 +2,9 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
 import { Heading, Text } from "@/components/ui";
-import { cn } from "@/lib/utils";
 
 export const CryptoOperationsSection = async () => {
-  const t = await getTranslations("features");
+  const t = await getTranslations("mainPage.features");
 
   const items = [
     {
@@ -36,30 +35,24 @@ export const CryptoOperationsSection = async () => {
   ];
 
   return (
-    <section className={cn("bg-bg-primary py-20 md:py-28")}>
+    <section className="bg-bg-primary py-20 md:py-28">
       <div className="container mx-auto text-center">
         <Heading
           as="h2"
           variant="section-xl"
-          className={cn(
-            "mx-auto mb-4 max-w-xs text-center",
-            "md:mb-6 md:max-w-3xl md:text-6xl",
-          )}
+          className="mx-auto mb-4 max-w-2xl text-center text-5xl md:mb-6 md:max-w-full md:text-6xl"
         >
           {t("title")}
         </Heading>
 
         <Text
           variant="card-lg"
-          className={cn(
-            "mx-auto mb-16 max-w-xs text-center",
-            "md:mb-20 md:max-w-3xl",
-          )}
+          className="mx-auto mb-16 max-w-2xl text-center md:mb-20 md:max-w-3xl"
         >
           {t("description")}
         </Text>
 
-        <ul className="grid gap-8 md:grid-cols-5">
+        <ul className="flex flex-col justify-between gap-6 md:flex-row md:gap-0">
           {items.map((item) => (
             <CryptoOperationItem
               key={item.key}
@@ -81,17 +74,16 @@ function CryptoOperationItem({
   label: string;
 }) {
   return (
-    <li className="mx-auto flex max-w-44 flex-col items-center">
+    <li className="mx-auto flex max-w-67 flex-col items-center">
       <Image
         src={image}
         alt={label}
         width={80}
         height={80}
-        quality={100}
-        unoptimized
+        quality={90}
         className="mx-auto mb-4"
       />
-      <Text variant="body" className="text-center">
+      <Text variant="card-lg" className="text-center">
         {label}
       </Text>
     </li>

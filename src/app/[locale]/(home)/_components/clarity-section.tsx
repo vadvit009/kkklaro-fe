@@ -2,12 +2,11 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
 import { Heading } from "@/components/ui";
-import { cn } from "@/lib/utils";
 
 import { ClarityListItem } from "./clarity-list-item";
 
 export const ClaritySection = async () => {
-  const t = await getTranslations("clarity");
+  const t = await getTranslations("mainPage.clarity");
 
   const items = [
     { line1: t("items.item1.line1"), line2: t("items.item1.line2") },
@@ -18,7 +17,10 @@ export const ClaritySection = async () => {
   ];
 
   return (
-    <section id="clarity" className="w-full md:py-24 md:pt-18 md:pb-13">
+    <section
+      id="clarity"
+      className="w-full bg-[url('/images/home/clarity-bg.png')] bg-cover bg-center bg-no-repeat md:pt-18 md:pt-24 lg:pb-20"
+    >
       <div className="container-s">
         <Heading
           as="h2"
@@ -41,14 +43,9 @@ export const ClaritySection = async () => {
             </ul>
           </div>
 
-          <div
-            className={cn(
-              "flex lg:w-1/2",
-              "items-end justify-center md:mb-[-52px]",
-            )}
-          >
+          <div className="flex items-center justify-center lg:w-1/2 xl:mb-[-80px] xl:items-end">
             <Image
-              src="/images/home/onbording.png"
+              src="/images/home/onboarding.png"
               width={769}
               height={506}
               alt="Clarity section preview"

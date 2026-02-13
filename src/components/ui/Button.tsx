@@ -33,7 +33,8 @@ const buttonVariants = {
   ],
   secondary: [
     "bg-black",
-    "hover:bg-[#242424] hover:border hover:border-purple-accent",
+    "border border-transparent",
+    "hover:bg-[#242424] hover:border-purple-accent",
   ],
   ghost: [
     "bg-transparent",

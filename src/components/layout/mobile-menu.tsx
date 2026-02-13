@@ -2,14 +2,15 @@
 
 import * as Dialog from "@radix-ui/react-dialog";
 import { useTranslations } from "next-intl";
-import { usePathname } from "next/navigation";
 
+import { BrandLink } from "@/components/common";
+import { useActiveNavLink } from "@/hooks/use-is-active";
 import { Link } from "@/i18n/navigation";
 import type { NavItem } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
-import { BrandLogo, Burger, Close } from "../icons";
-import { Button, Text } from "../ui";
+import { Burger, Close } from "../icons";
+import { Button } from "../ui";
 
 interface MobileMenuProps {
   items: NavItem[];
@@ -17,7 +18,7 @@ interface MobileMenuProps {
 
 export const MobileMenu = ({ items }: MobileMenuProps) => {
   const t = useTranslations("header");
-  const pathname = usePathname();
+  const isActive = useActiveNavLink();
 
   return (
     <Dialog.Root>
@@ -40,15 +41,11 @@ export const MobileMenu = ({ items }: MobileMenuProps) => {
           )}
         >
           <div className="container-s flex w-full items-center justify-between py-2.5">
-            <Link
-              href="/"
-              className="flex shrink-0 items-center gap-2 text-black"
-            >
-              <BrandLogo className="h-4.5" />
-              <Text className="font-display text-md font-semibold tracking-wider text-black">
-                KLARO GATE
-              </Text>
-            </Link>
+            <BrandLink
+              className="text-black"
+              logoClassName="h-4.5 md:h-4.5 md:w-auto"
+              textClassName="text-md md:text-md"
+            />
 
             <Dialog.Close asChild>
               <button
@@ -60,27 +57,26 @@ export const MobileMenu = ({ items }: MobileMenuProps) => {
             </Dialog.Close>
           </div>
 
-          <nav className="mb-5 flex flex-col">
-            {[...items].reverse().map((item) => {
-              const isActive =
-                pathname === item.href || pathname.startsWith(item.href + "/");
-
-              return (
-                <Dialog.Close asChild key={item.tKey}>
-                  <Link
-                    href={item.href}
-                    className={cn(
-                      "border-t border-gray-200 py-6 text-center font-bold uppercase",
-                      "transition-colors",
-                      "hover:text-purple-light",
-                      isActive ? "text-purple-light" : "text-black",
-                    )}
-                  >
-                    {t(`nav.${item.tKey}`)}
-                  </Link>
-                </Dialog.Close>
-              );
-            })}
+          <nav className="mb-5">
+            <ul className="flex flex-col">
+              {[...items].reverse().map((item) => (
+                <li key={item.tKey}>
+                  <Dialog.Close asChild>
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        "hover:text-purple-light block border-t border-gray-200 py-6 text-center font-bold uppercase transition-colors",
+                        isActive(item.href)
+                          ? "text-purple-light"
+                          : "text-black",
+                      )}
+                    >
+                      {t(`nav.${item.tKey}`)}
+                    </Link>
+                  </Dialog.Close>
+                </li>
+              ))}
+            </ul>
           </nav>
 
           <div className="container-s w-full">
