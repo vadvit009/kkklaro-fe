@@ -15,7 +15,7 @@ import { MobileMenu } from "./mobile-menu";
 export const Header = () => {
   const t = useTranslations("header");
   const isActive = useActiveNavLink();
-  const scrolled = useScrolled();
+  const scrolled = useScrolled(100);
 
   return (
     <header

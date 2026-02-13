@@ -8,10 +8,10 @@ export const NetworksSection = async () => {
   return (
     <section
       id="networks"
-      className="bg-[#040206] px-5 py-20 md:px-10 md:py-28 md:pt-38 xl:px-20"
+      className="bg-[#040206] bg-[url('/images/home/networks-bg-mob.png')] bg-center bg-no-repeat px-5 py-20 md:px-10 md:py-28 md:pt-38 xl:bg-none xl:px-20"
     >
       <div className="container">
-        <div className="grid gap-12 bg-[url('/images/home/networks-bg-mob.png')] bg-center bg-no-repeat lg:gap-20 xl:grid-cols-2 xl:bg-[url('/images/home/networks-bg.png')] xl:bg-[position:-90px_center]">
+        <div className="grid gap-12 lg:gap-20 xl:grid-cols-2 xl:bg-[url('/images/home/networks-bg.png')] xl:bg-[position:-90px_center] xl:bg-no-repeat">
           <div className="order-2 lg:order-1" />
 
           <div className="order-1 lg:order-2">

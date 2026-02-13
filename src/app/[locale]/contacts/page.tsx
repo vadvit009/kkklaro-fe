@@ -22,7 +22,7 @@ export default async function ContactsPage() {
 
   return (
     <main>
-      <section className="container-s pt-5 pb-13 md:pt-18 md:pb-20">
+      <section className="container-s pt-25 pb-13 lg:pt-11 lg:pb-20">
         <div className="mb-13 md:mb-31">
           <Text
             as="p"
