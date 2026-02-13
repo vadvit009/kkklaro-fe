@@ -41,11 +41,7 @@ export const MobileMenu = ({ items }: MobileMenuProps) => {
           )}
         >
           <div className="container-s flex w-full items-center justify-between py-2.5">
-            <BrandLink
-              className="text-black"
-              logoClassName="h-4.5 md:h-4.5 md:w-auto"
-              textClassName="text-md md:text-md"
-            />
+            <BrandLink className="text-black" textClassName="text-black" />
 
             <Dialog.Close asChild>
               <button
