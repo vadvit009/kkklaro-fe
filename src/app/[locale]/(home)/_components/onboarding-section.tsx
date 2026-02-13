@@ -20,7 +20,7 @@ export const OnboardingSection = async () => {
   ];
 
   return (
-    <section id="steps ">
+    <section id="steps">
       <div className="container">
         <SectionBanner
           className={cn(
@@ -29,38 +29,43 @@ export const OnboardingSection = async () => {
           )}
         >
           <div className="flex flex-col lg:flex-row lg:gap-8">
-            <div className="mb-4.5 flex flex-col lg:mb-0 lg:w-1/2">
+            <div className="mb-4.5 flex flex-col lg:mb-0 lg:w-1/2 lg:pb-20">
               <Heading as="h2" variant="section-lg" className="mb-8 md:mb-17">
                 {t("title")}
               </Heading>
-              <ol className="flex flex-col">
+              <ol className="mb-6 flex flex-col">
                 {steps.map((step, index) => (
                   <StepItem key={index} number={index + 1}>
                     {step}
                   </StepItem>
                 ))}
-
-                <a
-                  href="#"
-                  className={cn(
-                    "mt-6 inline-flex items-center gap-2",
-                    "text-purple-primary hover:text-purple-accent transition-colors",
-                  )}
-                >
-                  <Text
-                    as="span"
-                    variant="card"
-                    className="semibold leading-[1.78] text-inherit uppercase"
-                  >
-                    {t("viewDetails")}
-                  </Text>
-                </a>
               </ol>
+
+              <a
+                href="#"
+                className={cn(
+                  "inline-flex items-center gap-2",
+                  "text-purple-primary hover:text-purple-accent transition-colors",
+                )}
+              >
+                <Text
+                  as="span"
+                  variant="card"
+                  className="leading-[1.78] font-semibold text-inherit uppercase"
+                >
+                  {t("viewDetails")}
+                </Text>
+              </a>
             </div>
 
-            <div className={cn("flex lg:w-1/2", "items-end justify-center")}>
+            <div
+              className={cn(
+                "flex lg:w-1/2",
+                "items-center justify-center xl:items-end",
+              )}
+            >
               <Image
-                src="/images/home/onbording.png"
+                src="/images/home/onboarding.png"
                 width={769}
                 height={506}
                 alt="Onboarding preview"

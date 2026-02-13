@@ -47,7 +47,7 @@ export const BuiltForSection = async () => {
           {t("title")}
         </Heading>
 
-        <ul className="grid gap-6 md:grid-cols-3">
+        <ul className="grid gap-20 md:grid-cols-3">
           {cards.map((card) => (
             <BuiltForCard
               key={card.key}
@@ -72,14 +72,13 @@ function BuiltForCard({
   description: string;
 }) {
   return (
-    <li className={cn("flex flex-col md:p-6")}>
+    <li className={cn("flex flex-col")}>
       <Image
         src={image}
         alt={title}
         width={120}
         height={120}
-        quality={100}
-        unoptimized
+        quality={90}
         className="mx-auto"
       />
       <Heading as="h3" variant="card">

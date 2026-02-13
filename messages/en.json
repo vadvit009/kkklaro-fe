@@ -1,6 +1,6 @@
 {
   "header": {
-    "bookDemo": "Book a Demo",
+    "signUp": "Sign Up",
     "getInTouch": "Get in Touch",
     "nav": {
       "products": "Products",
@@ -148,6 +148,11 @@
       "emailRequired": "Email is required",
       "emailInvalid": "Invalid email address",
       "requestTypeRequired": "Request type is required"
+    },
+    "contacts": {
+      "sales": "Sales",
+      "partnerships": "Partnerships",
+      "support": "Support"
     }
   },
   "servicesPage": {
@@ -200,6 +205,16 @@
       "title": "Speak to an expert",
       "cta": "Create an account"
     }
+  },
+  "errorPage": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again or contact support if the problem persists.",
+    "retry": "Try again"
+  },
+  "notFoundPage": {
+    "title": "Page not found",
+    "description": "The page you are looking for doesn't exist or has been moved.",
+    "goHome": "Go to homepage"
   },
   "footer": {
     "copyright": "© Klaro Gate – {year}. All rights reserved",

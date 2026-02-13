@@ -14,10 +14,11 @@ export interface TextProps extends HTMLAttributes<HTMLElement> {
    * - card-lg: 22px, white (card descriptions)
    * - card: 18px, white (card descriptions)
    * - accordion: 22px, white, extralight (lists, accordions)
-   * - copyright: 16px, white (footer copyright)
+   * - service: 24px, white (service item descriptions)
+   * - caption: 12px, light, white (small descriptive text)
    * @default "body"
    */
-  variant?: "body" | "card-lg" | "card" | "accordion" | "copyright";
+  variant?: "body" | "card-lg" | "card" | "accordion" | "service" | "caption";
 }
 
 const textBase = ["font-normal"];
@@ -37,7 +38,8 @@ const textVariants = {
     "font-extralight",
     "text-text-primary",
   ],
-  copyright: ["text-base", "leading-[1.5]", "text-text-primary"],
+  service: ["text-2xl", "leading-[1.33]", "text-text-primary"],
+  caption: ["text-xs", "font-light", "text-text-primary"],
 };
 
 export const Text = ({

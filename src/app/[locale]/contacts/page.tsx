@@ -27,9 +27,42 @@ export default async function ContactsPage() {
           </Heading>
         </div>
 
-        <div className="bg-border-light mb-12 h-px md:mb-16" />
+        <div className="flex flex-col gap-12 lg:flex-row lg:gap-16">
+          <div className="flex-1">
+            <div className="bg-border-light mb-12 h-px max-w-5xl md:mb-16" />
+            <ContactForm />
+          </div>
 
-        <ContactForm />
+          <aside className="font-bricolage flex flex-col gap-6 leading-[2] text-white uppercase lg:w-56">
+            <div>
+              <Text variant="caption">{t("contacts.sales")}</Text>
+              <a
+                href="mailto:Sales@gmail.com"
+                className="text-base font-bold hover:underline"
+              >
+                Sales@gmail.com
+              </a>
+            </div>
+            <div>
+              <Text variant="caption">{t("contacts.partnerships")}</Text>
+              <a
+                href="mailto:Partnerships@gmail.com"
+                className="text-base font-bold hover:underline"
+              >
+                Partnerships@gmail.com
+              </a>
+            </div>
+            <div>
+              <Text variant="caption">{t("contacts.support")}</Text>
+              <a
+                href="mailto:Support@gmail.com"
+                className="text-base font-bold hover:underline"
+              >
+                Support@gmail.com
+              </a>
+            </div>
+          </aside>
+        </div>
       </section>
     </main>
   );

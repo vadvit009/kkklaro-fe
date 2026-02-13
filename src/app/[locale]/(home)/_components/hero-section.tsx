@@ -24,22 +24,25 @@ export const HeroSection = async () => {
         playsInline
         className="pointer-events-none col-start-1 row-start-1 h-full w-full overflow-hidden object-cover"
       >
-        <source src="/images/home/hiro-bg-animation.mp4" type="video/mp4" />
+        <source src="/images/home/hero-bg-animation.mp4" type="video/mp4" />
       </video>
       <div
         className={cn(
           "z-1 col-start-1 row-start-1",
           "flex flex-col items-center justify-center",
-          "px-5 pt-28",
+          "px-5 pt-38",
           "md:px-10 md:pt-70",
           "container mx-auto text-center",
         )}
       >
         <Image
           src="/images/home/hero-logo.png"
+          // src="/images/home/LOGO.png"
           alt="Hero image"
           width={297}
           height={297}
+          // width={1339}
+          // height={979}
           className={cn("mx-auto h-37.5 w-37.5", "md:mb-5", "lg:h-74 lg:w-74")}
         />
         <Heading

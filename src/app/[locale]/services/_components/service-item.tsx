@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { Heading, Text } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 export function ServiceItem({
@@ -32,35 +33,40 @@ export function ServiceItem({
           alt={title}
           width={839}
           height={347}
-          quality={100}
-          unoptimized
+          quality={90}
           className="h-auto w-full"
         />
       </div>
 
       <div className="flex-1">
-        <h3 className="font-bricolage mb-4 text-[2rem] leading-none font-medium text-white">
+        <Heading
+          as="h3"
+          variant="card"
+          className="mb-4 leading-none font-medium"
+        >
           {title}
-        </h3>
+        </Heading>
 
-        <p className="font-bricolage text-2xl leading-[1.33] font-bold text-white">
+        <Text variant="service" className="mb-[1.33em] font-bold">
           {subtitle}
-        </p>
-        <p className="font-bricolage mt-[1.33em] text-2xl leading-[1.33] font-extralight text-white">
+        </Text>
+        <Text variant="service" className="mb-[1.33em] font-extralight">
           {description}
-        </p>
+        </Text>
 
-        <p className="font-bricolage mt-[1.33em] text-2xl leading-[1.33] font-bold text-white">
+        <Text variant="service" className="font-bold">
           {whatYouGet}
-        </p>
+        </Text>
         <ul>
           {features.map((feature) => (
-            <li
+            <Text
+              as="span"
               key={feature}
-              className="font-bricolage text-2xl leading-[1.33] font-extralight text-white"
+              variant="service"
+              className="block font-extralight"
             >
               ✓ {feature}
-            </li>
+            </Text>
           ))}
         </ul>
       </div>

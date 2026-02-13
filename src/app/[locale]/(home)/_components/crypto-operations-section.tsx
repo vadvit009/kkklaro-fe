@@ -59,7 +59,7 @@ export const CryptoOperationsSection = async () => {
           {t("description")}
         </Text>
 
-        <ul className="grid gap-8 md:grid-cols-5">
+        <ul className="flex flex-col justify-between gap-6 md:flex-row md:gap-0">
           {items.map((item) => (
             <CryptoOperationItem
               key={item.key}
@@ -81,17 +81,16 @@ function CryptoOperationItem({
   label: string;
 }) {
   return (
-    <li className="mx-auto flex max-w-44 flex-col items-center">
+    <li className="mx-auto flex max-w-67 flex-col items-center">
       <Image
         src={image}
         alt={label}
         width={80}
         height={80}
-        quality={100}
-        unoptimized
+        quality={90}
         className="mx-auto mb-4"
       />
-      <Text variant="body" className="text-center">
+      <Text variant="card-lg" className="text-center">
         {label}
       </Text>
     </li>
