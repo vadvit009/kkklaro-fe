@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Bricolage_Grotesque, Montserrat } from "next/font/google";
 import { notFound } from "next/navigation";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { routing } from "@/i18n/routing";
+
+const bricolage = Bricolage_Grotesque({
+  weight: ["200", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-bricolage",
+});
+
+const montserrat = Montserrat({
+  weight: ["600"],
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-montserrat",
+});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -52,10 +65,17 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <NextIntlClientProvider>
-      <Header />
-      {children}
-      <Footer />
-    </NextIntlClientProvider>
+    <html
+      lang={locale}
+      className={`${bricolage.variable} ${montserrat.variable}`}
+    >
+      <body>
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
