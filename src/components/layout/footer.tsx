@@ -16,7 +16,7 @@ export const Footer = () => {
   const isActive = useActiveNavLink();
 
   return (
-    <footer className="border-text-primary/10 bg-bg-primary border-t md:py-16">
+    <footer className="border-text-primary/10 bg-bg-primary border-t py-12 md:py-16">
       <div className="container-s">
         <div
           className={cn(

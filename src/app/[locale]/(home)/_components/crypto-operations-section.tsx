@@ -42,8 +42,8 @@ export const CryptoOperationsSection = async () => {
           as="h2"
           variant="section-xl"
           className={cn(
-            "mx-auto mb-4 max-w-xs text-center",
-            "md:mb-6 md:max-w-3xl md:text-6xl",
+            "mx-auto mb-4 max-w-2xl text-center text-5xl",
+            "md:mb-6 md:max-w-full md:text-6xl",
           )}
         >
           {t("title")}
@@ -52,7 +52,7 @@ export const CryptoOperationsSection = async () => {
         <Text
           variant="card-lg"
           className={cn(
-            "mx-auto mb-16 max-w-xs text-center",
+            "mx-auto mb-16 max-w-2xl text-center",
             "md:mb-20 md:max-w-3xl",
           )}
         >
