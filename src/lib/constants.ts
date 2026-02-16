@@ -4,7 +4,7 @@ export interface NavItem {
 }
 
 export const navLinks: NavItem[] = [
-  { tKey: "products", href: "/products" },
+  { tKey: "products", href: "/" },
   { tKey: "services", href: "/services" },
   { tKey: "developers", href: "/developers" },
   { tKey: "contacts", href: "/contacts" },

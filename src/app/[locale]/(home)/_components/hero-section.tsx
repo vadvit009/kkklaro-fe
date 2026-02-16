@@ -4,6 +4,8 @@ import Image from "next/image";
 import { SectionBanner } from "@/components/common/sections-banner";
 import { Button, Heading, Text } from "@/components/ui";
 
+import { HeroVideo } from "./hero-video";
+
 export const HeroSection = async () => {
   const t = await getTranslations("mainPage.hero");
 
@@ -12,15 +14,7 @@ export const HeroSection = async () => {
       className="bg-purple-primary relative grid grid-cols-1 before:absolute before:inset-0 before:z-[1] before:bg-black/40"
       style={{ boxShadow: "0 4px 4px 0 rgba(0, 0, 0, 0.25)" }}
     >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="pointer-events-none col-start-1 row-start-1 h-full w-full overflow-hidden object-cover"
-      >
-        <source src="/images/home/hero-bg-animation.mp4" type="video/mp4" />
-      </video>
+      <HeroVideo />
       <div className="z-1 col-start-1 row-start-1 container mx-auto flex flex-col items-center justify-center px-5 pt-38 text-center md:px-10 md:pt-70">
         <Image
           src="/images/home/hero-logo.png"

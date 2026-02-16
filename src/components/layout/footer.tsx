@@ -48,7 +48,7 @@ export const Footer = () => {
               <li>
                 <Link
                   href="/legal"
-                  className="text-text-primary hover:text-purple-light transition-colors"
+                  className="text-text-primary hover:text-purple-light font-bold uppercase transition-colors"
                 >
                   {t("legal")}
                 </Link>
