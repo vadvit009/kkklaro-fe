@@ -4,3 +4,7 @@ export { Close } from "./close";
 export { Burger } from "./burger";
 export { ChevronDown } from "./chevron-down";
 export { Check } from "./check";
+export { BuildFor1Kc } from "./build-for-1-kc";
+export { BuildFor2Kc } from "./build-for-2-kc";
+export { BuildFor3Kc } from "./build-for-3-kc";
+export { LogoBgKc } from "./logo-bg-kc";

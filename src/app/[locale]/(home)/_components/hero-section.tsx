@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
-import Image from "next/image";
 
 import { SectionBanner } from "@/components/common/sections-banner";
+import { LogoBgKc } from "@/components/icons";
 import { Button, Heading, Text } from "@/components/ui";
 
 import { HeroVideo } from "./hero-video";
@@ -16,16 +16,14 @@ export const HeroSection = async () => {
     >
       <HeroVideo />
       <div className="z-1 col-start-1 row-start-1 container mx-auto flex flex-col items-center justify-center px-5 pt-38 text-center md:px-10 md:pt-70">
-        <Image
+        {/* <Image
           src="/images/home/hero-logo.png"
-          // src="/images/home/LOGO.png"
           alt="Hero image"
           width={297}
           height={297}
-          // width={1339}
-          // height={979}
           className="mx-auto h-37.5 w-37.5 md:mb-5 lg:h-74 lg:w-74"
-        />
+        /> */}
+        <LogoBgKc className="mx-auto h-37.5 w-37.5 md:mb-5 lg:h-74 lg:w-74" />
         <Heading
           as="h1"
           variant="hero"

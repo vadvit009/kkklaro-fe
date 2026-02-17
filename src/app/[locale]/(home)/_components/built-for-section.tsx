@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
-import Image from "next/image";
+import { type ComponentType, type SVGProps } from "react";
 
+import { BuildFor1Kc, BuildFor2Kc, BuildFor3Kc } from "@/components/icons";
 import { Heading, Text } from "@/components/ui";
 
 export const BuiltForSection = async () => {
@@ -9,19 +10,19 @@ export const BuiltForSection = async () => {
   const cards = [
     {
       key: "ecommerce",
-      image: "/images/home/build-for-1.png",
+      Icon: BuildFor1Kc,
       title: t("ecommerce.title"),
       description: t("ecommerce.description"),
     },
     {
       key: "marketplaces",
-      image: "/images/home/build-for-2.png",
+      Icon: BuildFor2Kc,
       title: t("marketplaces.title"),
       description: t("marketplaces.description"),
     },
     {
       key: "fintech",
-      image: "/images/home/build-for-3.png",
+      Icon: BuildFor3Kc,
       title: t("fintech.title"),
       description: t("fintech.description"),
     },
@@ -42,7 +43,7 @@ export const BuiltForSection = async () => {
           {cards.map((card) => (
             <BuiltForCard
               key={card.key}
-              image={card.image}
+              Icon={card.Icon}
               title={card.title}
               description={card.description}
             />
@@ -54,24 +55,17 @@ export const BuiltForSection = async () => {
 };
 
 function BuiltForCard({
-  image,
+  Icon,
   title,
   description,
 }: {
-  image: string;
+  Icon: ComponentType<SVGProps<SVGSVGElement>>;
   title: string;
   description: string;
 }) {
   return (
     <li className="flex flex-col">
-      <Image
-        src={image}
-        alt={title}
-        width={120}
-        height={120}
-        quality={90}
-        className="mx-auto"
-      />
+      <Icon className="mx-auto h-30 w-30 overflow-hidden" aria-label={title} />
       <Heading as="h3" variant="card">
         {title}
       </Heading>

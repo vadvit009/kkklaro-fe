@@ -12,4 +12,4 @@ export const ${componentName} = ({ className, ...props }: SVGProps<SVGSVGElement
 `;
 };
 
-module.exports = template;
+export default template;

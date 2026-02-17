@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "eslint",
     "prepare": "husky",
-    "icons": "svgr --out-dir src/components/icons assets/icons",
+    "icons": "svgr --out-dir src/components/icons assets/icons && svgr --config-file .svgrrc-kc.js --out-dir src/components/icons assets/icons-kc && node scripts/clean-kc-icons.js",
     "icons:watch": "svgr --out-dir src/components/icons assets/icons --watch"
   },
   "lint-staged": {
@@ -43,6 +43,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.7",
     "husky": "^9.1.7",
