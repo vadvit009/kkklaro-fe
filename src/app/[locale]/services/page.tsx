@@ -1,19 +1,26 @@
-import { useLocale, useTranslations } from "next-intl";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
-const ServicesPage = () => {
-  const locale = useLocale();
+import { CTABanner, HeroSection, ServicesListSection } from "./_components";
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[locale]/services">): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata.services" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
+export default async function ServicesPage() {
   return (
-    <>
-      <h1>Services page</h1>
-      <p>{locale}</p>
-      <div>
-        Mollit pariatur fugiat eiusmod ullamco pariatur adipisicing culpa duis
-        excepteur tempor laborum. Minim et nisi sint dolor ut aliquip enim esse.
-        Elit dolore in exercitation mollit eu est excepteur excepteur in officia
-        amet.
-      </div>
-    </>
+    <main>
+      <HeroSection />
+      <ServicesListSection />
+      <CTABanner />
+    </main>
   );
-};
-
-export default ServicesPage;
+}

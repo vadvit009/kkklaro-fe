@@ -1,5 +1,239 @@
 {
-  "homePage": {
-    "greeting": "Hello there! Click on this text to change locale"
+  "metadata": {
+    "siteName": "Klaro Gate",
+    "home": {
+      "title": "Crypto Payment Platform for Business",
+      "description": "Accept and manage crypto payments without complexity. Wallets, balances, withdrawals and tracking — all in one platform."
+    },
+    "services": {
+      "title": "Services",
+      "description": "From invoices and accounts to balances and withdrawals. Everything you need to run crypto payments at scale."
+    },
+    "contacts": {
+      "title": "Contact Us",
+      "description": "Get in touch with Klaro Gate team. Book a demo, request a consultation or explore partnership opportunities."
+    }
+  },
+  "header": {
+    "signUp": "Sign Up",
+    "getInTouch": "Get in Touch",
+    "nav": {
+      "products": "Products",
+      "services": "Services",
+      "developers": "Developers",
+      "contacts": "Contacts",
+      "networks": "Networks",
+      "howItWorks": "How it works",
+      "faq": "FAQ"
+    }
+  },
+  "mainPage": {
+    "hero": {
+      "title": "Accept and manage crypto payments, without crypto complexity",
+      "description": "Receive crypto payments, manage wallets and balances, send withdrawals and automate operations — all in one place.",
+      "seeInAction": "See Klaro Gate in action",
+      "seeInActionDescription": "Book a short demo and see how crypto payments work without operational complexity.",
+      "cta": "Book a Demo"
+    },
+    "builtFor": {
+      "title": "Built for businesses and platforms",
+      "ecommerce": {
+        "title": "E-commerce & SaaS",
+        "description": "Accept crypto payments, issue invoices and track settlements in one dashboard."
+      },
+      "marketplaces": {
+        "title": "Marketplaces",
+        "description": "Receive payments from customers and manage funds across accounts."
+      },
+      "fintech": {
+        "title": "Fintech & Neobanks",
+        "description": "Launch crypto accounts, balances and transfers inside your app, without building custody infrastructure."
+      }
+    },
+    "features": {
+      "title": "Crypto payments without operational chaos",
+      "description": "Accepting crypto usually means dealing with multiple wallets, addresses and manual tracking. Klaro Gate removes that operational complexity.",
+      "list": {
+        "walletCreation": "Automatic wallet and address creation",
+        "paymentTracking": "Clear payment and confirmation tracking",
+        "aggregatedBalances": "Aggregated balances across accounts",
+        "withdrawalFlows": "Controlled withdrawal flows",
+        "oneDashboard": "One dashboard for all crypto operations"
+      }
+    },
+    "ctaBanner": {
+      "title": "Start accepting crypto in minutes",
+      "cta": "Book a Demo"
+    },
+    "steps": {
+      "title": "From signup to your first crypto payment",
+      "step1": "Create your account",
+      "step2": "Create accounts and wallets",
+      "step3": "Share payment address or invoice",
+      "step4": "Receive crypto",
+      "step5": "Track balances and transactions",
+      "step6": "Withdraw funds or automate via API",
+      "viewDetails": "View Product Details"
+    },
+    "networks": {
+      "title": "Accept and manage payments across popular blockchain networks",
+      "networksLabel": "Networks:",
+      "networksList": "Ethereum · Tron · Solana · Polygon · BNB Smart Chain",
+      "assetsLabel": "Assets:",
+      "assetsList": "USDT · USDC · BTC · ETH · BNB · TRX · DOGE · PEPE"
+    },
+    "clarity": {
+      "title": "Instead of complexity, you get clarity",
+      "items": {
+        "item1": {
+          "line1": "Instead of starting simple and rebuilding later",
+          "line2": "You get a platform that scales with you"
+        },
+        "item2": {
+          "line1": "Instead of handling private keys and security risks",
+          "line2": "You get managed wallets and on-chain operations"
+        },
+        "item3": {
+          "line1": "Instead of experimental crypto tools",
+          "line2": "You get production-ready payment flows"
+        },
+        "item4": {
+          "line1": "Instead of multiple tools for different use cases",
+          "line2": "You get one platform for every stage"
+        },
+        "item5": {
+          "line1": "Instead of separate systems for UI and integrations",
+          "line2": "You get an API-first platform"
+        }
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "q1": {
+        "question": "Is Klaro Gate a wallet or a payment platform?",
+        "answer": "Klaro Gate is an operational platform for crypto payments. It provides managed wallets, payment tracking, balances and withdrawals — without exposing private keys to clients."
+      },
+      "q2": {
+        "question": "Do I need to manage private keys or blockchain infrastructure?",
+        "answer": "No. Klaro Gate handles all wallet management, key storage and blockchain interactions. You work with a clean API and dashboard — no infrastructure to maintain."
+      },
+      "q3": {
+        "question": "How fast can I get started?",
+        "answer": "You can create an account and start accepting crypto payments within minutes. Our onboarding process is simple and requires no technical blockchain knowledge."
+      },
+      "q4": {
+        "question": "Can I see where my funds are at any moment?",
+        "answer": "Yes. Klaro Gate provides a centralized dashboard with real-time balances, transaction history and payment tracking across all your accounts and wallets."
+      },
+      "q5": {
+        "question": "Can I receive payments without creating invoices?",
+        "answer": "Yes. You can share a wallet address directly or use our payment links. Invoices are optional and can be generated when needed."
+      },
+      "q6": {
+        "question": "Can I manage multiple customers or projects separately?",
+        "answer": "Yes. Klaro Gate supports multiple accounts and sub-accounts, allowing you to separate funds, track payments and manage operations for different customers or projects independently."
+      },
+      "q7": {
+        "question": "Which blockchains and assets are supported?",
+        "answer": "Klaro Gate supports Ethereum, Tron, Solana, Polygon and BNB Smart Chain. Supported assets include USDT, USDC, BTC, ETH, BNB, TRX, DOGE and PEPE."
+      }
+    }
+  },
+  "contactsPage": {
+    "subtitle": "We'd love to hear from you",
+    "title": "Let's talk about your use case!",
+    "form": {
+      "name": "Your name",
+      "namePlaceholder": "Enter your name and surname",
+      "email": "Your email",
+      "emailPlaceholder": "Enter your email",
+      "requestType": "Request type",
+      "requestTypePlaceholder": "Book a demo",
+      "message": "Message",
+      "messagePlaceholder": "Tell us a bit about your needs",
+      "submit": "Submit"
+    },
+    "requestTypes": {
+      "bookDemo": "Book a demo",
+      "consultation": "Consultation",
+      "partnership": "Partnership program"
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "requestTypeRequired": "Request type is required"
+    },
+    "contacts": {
+      "sales": "Sales",
+      "partnerships": "Partnerships",
+      "support": "Support"
+    }
+  },
+  "servicesPage": {
+    "subtitle": "From invoices and accounts to balances and withdrawals — all in one platform",
+    "title": "Everything you need to run crypto payments at scale",
+    "whatYouGet": "What you get:",
+    "services": {
+      "item1": {
+        "title": "Payments",
+        "subtitle": "Accept crypto payments with full visibility",
+        "description": "Create crypto invoices, receive payments and track their status in real time — without managing wallets or blockchain logic manually.",
+        "features": {
+          "f1": "Invoice creation with amount and expiration if needed",
+          "f2": "Payment status tracking (pending / confirmed)"
+        }
+      },
+      "item2": {
+        "title": "Accounts",
+        "subtitle": "Organize funds with account-level structure",
+        "description": "Separate funds by customers, projects or internal operations using dedicated accounts — each with its own wallets, balances and history.",
+        "features": {
+          "f1": "Multiple accounts under one tenant",
+          "f2": "Wallets created per account and blockchain",
+          "f3": "Account statuses and operational controls"
+        }
+      },
+      "item3": {
+        "title": "Balances",
+        "subtitle": "Full balance control and transparency",
+        "description": "Track available, pending and frozen balances across all accounts, with complete transaction history and export options.",
+        "features": {
+          "f1": "Balance breakdown by status",
+          "f2": "Aggregated balances across accounts",
+          "f3": "Transaction history with filters",
+          "f4": "CSV and PDF exports for accounting"
+        }
+      },
+      "item4": {
+        "title": "Transaction",
+        "subtitle": "Controlled crypto withdrawals",
+        "description": "Send crypto withdrawals through a clear, auditable flow with confirmations and real-time status updates.",
+        "features": {
+          "f1": "Withdrawal creation and tracking",
+          "f2": "Clear statuses (queued, broadcast, confirmed, failed)",
+          "f3": "Full withdrawal history and visibility"
+        }
+      }
+    },
+    "ctaBanner": {
+      "title": "Speak to an expert",
+      "cta": "Create an account"
+    }
+  },
+  "errorPage": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again or contact support if the problem persists.",
+    "retry": "Try again"
+  },
+  "notFoundPage": {
+    "title": "Page not found",
+    "description": "The page you are looking for doesn't exist or has been moved.",
+    "goHome": "Go to homepage"
+  },
+  "footer": {
+    "copyright": "© Klaro Gate – {year}. All rights reserved",
+    "legal": "Legal",
+    "contact": "Contact"
   }
 }

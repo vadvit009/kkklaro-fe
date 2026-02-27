@@ -1,0 +1,91 @@
+import { getTranslations } from "next-intl/server";
+import Image from "next/image";
+
+import { Heading, Text } from "@/components/ui";
+
+export const CryptoOperationsSection = async () => {
+  const t = await getTranslations("mainPage.features");
+
+  const items = [
+    {
+      key: "walletCreation",
+      image: "/images/home/crypto-operations-1.png",
+      label: t("list.walletCreation"),
+    },
+    {
+      key: "paymentTracking",
+      image: "/images/home/crypto-operations-2.png",
+      label: t("list.paymentTracking"),
+    },
+    {
+      key: "aggregatedBalances",
+      image: "/images/home/crypto-operations-3.png",
+      label: t("list.aggregatedBalances"),
+    },
+    {
+      key: "withdrawalFlows",
+      image: "/images/home/crypto-operations-4.png",
+      label: t("list.withdrawalFlows"),
+    },
+    {
+      key: "oneDashboard",
+      image: "/images/home/crypto-operations-5.png",
+      label: t("list.oneDashboard"),
+    },
+  ];
+
+  return (
+    <section className="bg-bg-primary py-20 md:py-28">
+      <div className="container mx-auto text-center">
+        <Heading
+          as="h2"
+          variant="section-xl"
+          className="mx-auto mb-4 max-w-2xl text-center text-5xl md:mb-6 md:max-w-full md:text-6xl"
+        >
+          {t("title")}
+        </Heading>
+
+        <Text
+          variant="card-lg"
+          className="mx-auto mb-16 max-w-2xl text-center md:mb-20 md:max-w-3xl"
+        >
+          {t("description")}
+        </Text>
+
+        <ul className="flex flex-col justify-between gap-6 md:flex-row md:gap-0">
+          {items.map((item) => (
+            <CryptoOperationItem
+              key={item.key}
+              image={item.image}
+              label={item.label}
+            />
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+};
+
+function CryptoOperationItem({
+  image,
+  label,
+}: {
+  image: string;
+  label: string;
+}) {
+  return (
+    <li className="mx-auto flex max-w-67 flex-col items-center">
+      <Image
+        src={image}
+        alt={label}
+        width={80}
+        height={80}
+        quality={90}
+        className="mx-auto mb-4"
+      />
+      <Text variant="card-lg" className="text-center">
+        {label}
+      </Text>
+    </li>
+  );
+}

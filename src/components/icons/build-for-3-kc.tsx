@@ -1,0 +1,166 @@
+import { SVGProps } from "react";
+
+import { cn } from "@/lib/utils";
+
+export const BuildFor3Kc = ({
+  className,
+  ...props
+}: SVGProps<SVGSVGElement>) => (
+  <svg
+    width="1em"
+    height="1em"
+    viewBox="0 0 120 120"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={cn(className)}
+    {...props}
+  >
+    <g filter="url(#filter0_i_74_2365)">
+      <path
+        d="M49.9692 53.3128C40.4695 46.9796 40.4695 33.0204 49.9692 26.6872L51.1248 25.9168C56.4992 22.3339 63.5008 22.3339 68.8752 25.9168L70.0308 26.6872C79.5305 33.0204 79.5305 46.9796 70.0308 53.3128L68.8752 54.0832C63.5008 57.6661 56.4992 57.6661 51.1248 54.0832L49.9692 53.3128Z"
+        fill="url(#paint0_linear_74_2365)"
+        fillOpacity={0.1}
+      />
+      <path
+        d="M51.4023 26.333C56.6088 22.8621 63.3912 22.8621 68.5977 26.333L69.7539 27.1035C78.9562 33.2388 78.9562 46.7612 69.7539 52.8965L68.5977 53.667C63.3912 57.1379 56.6088 57.1379 51.4023 53.667L50.2461 52.8965C41.0438 46.7612 41.0438 33.2388 50.2461 27.1035L51.4023 26.333Z"
+        stroke="url(#paint1_linear_74_2365)"
+      />
+    </g>
+    <g filter="url(#filter1_i_74_2365)">
+      <path
+        d="M30 70L60 50L90 70L60 90L30 70Z"
+        fill="url(#paint2_linear_74_2365)"
+        fillOpacity={0.1}
+      />
+      <path
+        d="M89.0986 70L60 89.3984L30.9014 70L60 50.6006L89.0986 70Z"
+        stroke="url(#paint3_linear_74_2365)"
+      />
+    </g>
+    <defs>
+      <filter
+        id="filter0_i_74_2365"
+        x={-57.1556}
+        y={-76.7704}
+        width={234.311}
+        height={233.541}
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity={0} result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset />
+        <feGaussianBlur stdDeviation={0.5} />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2={-1} k3={1} />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="shape"
+          result="effect1_innerShadow_74_2365"
+        />
+      </filter>
+      <clipPath
+        id="bgblur_0_74_2365_clip_path"
+        transform="translate(57.1556 76.7704)"
+      >
+        <path d="M49.9692 53.3128C40.4695 46.9796 40.4695 33.0204 49.9692 26.6872L51.1248 25.9168C56.4992 22.3339 63.5008 22.3339 68.8752 25.9168L70.0308 26.6872C79.5305 33.0204 79.5305 46.9796 70.0308 53.3128L68.8752 54.0832C63.5008 57.6661 56.4992 57.6661 51.1248 54.0832L49.9692 53.3128Z" />
+      </clipPath>
+      <filter
+        id="filter1_i_74_2365"
+        x={-70}
+        y={-50}
+        width={260}
+        height={240}
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity={0} result="BackgroundImageFix" />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset />
+        <feGaussianBlur stdDeviation={0.5} />
+        <feComposite in2="hardAlpha" operator="arithmetic" k2={-1} k3={1} />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="shape"
+          result="effect1_innerShadow_74_2365"
+        />
+      </filter>
+      <clipPath id="bgblur_1_74_2365_clip_path" transform="translate(70 50)">
+        <path d="M30 70L60 50L90 70L60 90L30 70Z" />
+      </clipPath>
+      <linearGradient
+        id="paint0_linear_74_2365"
+        x1={59.9557}
+        y1={23.4444}
+        x2={59.9557}
+        y2={97.4444}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="white" />
+        <stop offset={1} stopColor="#999999" stopOpacity={0} />
+      </linearGradient>
+      <linearGradient
+        id="paint1_linear_74_2365"
+        x1={59.9557}
+        y1={62}
+        x2={49.233}
+        y2={16.4546}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopOpacity={0} />
+        <stop offset={1} stopColor="white" stopOpacity={0.4} />
+      </linearGradient>
+      <linearGradient
+        id="paint2_linear_74_2365"
+        x1={59.9557}
+        y1={53.4444}
+        x2={59.9557}
+        y2={127.444}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="white" />
+        <stop offset={1} stopColor="#999999" stopOpacity={0} />
+      </linearGradient>
+      <linearGradient
+        id="paint3_linear_74_2365"
+        x1={59.9557}
+        y1={92}
+        x2={49.233}
+        y2={46.4546}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopOpacity={0} />
+        <stop offset={1} stopColor="white" stopOpacity={0.4} />
+      </linearGradient>
+    </defs>
+  </svg>
+);

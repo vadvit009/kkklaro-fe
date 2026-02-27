@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "icons": "svgr --out-dir src/components/icons assets/icons && svgr --config-file .svgrrc-kc.js --out-dir src/components/icons assets/icons-kc && node scripts/clean-kc-icons.js",
+    "icons:watch": "svgr --out-dir src/components/icons assets/icons --watch"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,md}": [
@@ -17,22 +19,31 @@
     ]
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@radix-ui/react-accordion": "^1.2.12",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-select": "^2.2.6",
     "clsx": "^2.1.1",
+    "lucide-react": "^0.563.0",
     "next": "16.0.7",
     "next-intl": "^4.5.8",
     "postcss": "^8.5.6",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "tailwind-merge": "^3.4.0"
+    "react-hook-form": "^7.71.1",
+    "tailwind-merge": "^3.4.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
+    "@svgr/cli": "^8.1.0",
     "@tailwindcss/postcss": "^4.1.17",
     "@trivago/prettier-plugin-sort-imports": "^6.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.7",
     "husky": "^9.1.7",
