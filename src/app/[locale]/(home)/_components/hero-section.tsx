@@ -4,7 +4,6 @@ import { SectionBanner } from "@/components/common/sections-banner";
 import { Button, Heading, Text } from "@/components/ui";
 
 import { HeroLogo } from "./hero-logo";
-import { HeroLogoSVG } from "./hero-logo-svg";
 import { HeroVideo } from "./hero-video";
 
 export const HeroSection = async () => {

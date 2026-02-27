@@ -3,7 +3,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const VIDEO_SRC = "/images/home/hero-bg-animation.mp4";
+const VIDEO_SRC = "/hero-bg-animation.mp4";
+// const VIDEO_SRC = "/hero-bg-animation_tiny.mp4";
 // const POSTER_SRC = "/images/home/hero-bg.webp";
 const POSTER_SRC = "/images/home/hero-bg-opti.webp";
 
